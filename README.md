@@ -1,9 +1,8 @@
-# ProjetChatBot
+# chatbot project
 
 
 ## Description
-This project aims to demonstrate the functionalities of my application. It uses Flask for the backend and React for the frontend.
-
+this projet use Flask to communicate with a rasa chatbot
 ## Installation
 1. Clone this repository to your local machine.
 2. Install Python dependencies in  directory :
