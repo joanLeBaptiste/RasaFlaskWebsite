@@ -20,5 +20,6 @@ This project aims to demonstrate the functionalities of my application. It uses 
 2. Access http://127.0.0.1:5000 in your browser to use the application.
 
 ## Contributors
-https://github.com/joanLeBaptiste
-https://github.com/GemimaOndele
+1.https://github.com/joanLeBaptiste
+
+2.https://github.com/GemimaOndele
