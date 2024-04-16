@@ -1,7 +1,11 @@
 from flask import Flask, request, jsonify, render_template
 import requests
+from flask_sqlalchemy import SQLAlchemy
+
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///chemin/vers/votre/base_de_donnees.db'
+db = SQLAlchemy(app)
 
 # bot
 @app.route('/chatbot', methods=['POST'])

@@ -4,8 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot Example</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        #chat-container {
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 2px 2px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+            font-size: 14px;
+        }
+
+        #chat-log {
+            height: 340px;
+            overflow-y: auto;
+            padding: 10px;
+            background: #fafafa;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #chat-log p {
+            margin: 5px 0;
+            line-height: 1.4;
+        }
+
+        #user-input, button {
+            margin: 10px 5%;
+            padding: 10px;
+            width: 88%; /* Adjust width calculation */
+            box-sizing: border-box; /* Include padding and border in width */
+        }
+
+        #user-input {
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #toggle-chat {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            line-height: 36px;
+            text-align: center;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #toggle-chat:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
+    <button id="toggle-chat" onclick="toggleChat()">+</button>
     <div id="chat-container">
         <div id="chat-log"></div>
         <input type="text" id="user-input" placeholder="Type your message...">
@@ -29,10 +115,23 @@
                 var chatLog = document.getElementById("chat-log");
                 chatLog.innerHTML += "<p><strong>User:</strong> " + userInput + "</p>";
                 chatLog.innerHTML += "<p><strong>Chatbot:</strong> " + data[0].text + "</p>";
+                chatLog.scrollTop = chatLog.scrollHeight;
             })
             .catch(error => {
                 console.error('Error:', error);
             });
+        }
+
+        function toggleChat() {
+            var chatContainer = document.getElementById("chat-container");
+            var toggleButton = document.getElementById("toggle-chat");
+            if (chatContainer.style.display === "none") {
+                chatContainer.style.display = "flex";
+                toggleButton.textContent = "-";
+            } else {
+                chatContainer.style.display = "none";
+                toggleButton.textContent = "+";
+            }
         }
     </script>
 </body>
