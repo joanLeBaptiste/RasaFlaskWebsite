@@ -6,25 +6,82 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
 
-- story: sad path 1
+- story: sad path
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
   - intent: deny
-  - action: utter_goodbye
+  - action: utter_deny
+
+- story: affirm_path
+  steps:
+  - intent: affirm
+  - action: utter_affirm
+
+- story: payement-method_path
+  steps:
+  - intent: payment_methods
+  - action: utter_payment_methods
+
+- story: mood_path
+  steps:
+    - intent: mood_great
+    - action: utter_mood_great
+
+- story: thanks
+  steps:
+    - intent: thanks
+    - action: utter_thanks
+- story: bot_challenge_path
+  steps:
+    - intent: bot_challenge
+    - action: utter_bot_challenge
+
+- story: whats_your_name
+  steps:
+    - intent: whats_your_name
+    - action: utter_whats_your_name
+
+- story: User asks for return policy
+  steps:
+  - intent: return_policy
+  - action: utter_return_policy
+
+- story: User asks for shipping information
+  steps:
+  - intent: shipping_info
+  - action: utter_shipping_info
+
+- story: User asks for privacy policy
+  steps:
+  - intent: privacy_policy
+  - action: utter_privacy_policy
+
+- story: User asks for return process
+  steps:
+  - intent: return_process
+  - action: utter_return_process
+
+- story: User asks for contact information
+  steps:
+  - intent: contact_info
+  - action: utter_contact_info
+
+- story: User asks for product information
+  steps:
+  - intent: product_information
+  - action: utter_product_information
+
+- story: User asks for privacy consent
+  steps:
+  - intent: privacy_consent
+  - action: utter_privacy_consent
+
+- story: User asks for return and refund policy
+  steps:
+  - intent: return_refund_policy
+  - action: utter_return_refund_policy
+
+- story: find_products
+  steps:
+    - intent: rechercher_produit
+    - action: action_get_product_characteristics

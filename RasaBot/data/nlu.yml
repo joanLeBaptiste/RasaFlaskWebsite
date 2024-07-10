@@ -16,19 +16,19 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - yo
+    - HEY
+    - heyy
+    - Hey!!!
+    - hallo?
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    -bye
+    -goodbye
+    -see you
+    -see ya
+    -adios
 
 - intent: affirm
   examples: |
@@ -38,7 +38,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -48,6 +47,29 @@ nlu:
     - don't like that
     - no way
     - not really
+    - Nah, I would not like to be added to the list
+    - nope
+    - u stink
+
+- intent: payment_methods
+  examples: |
+    - what kind of payment methods do you offer?
+    - how do I pay
+    - how do we pay
+    - how to pay
+    - what payment you accept
+
+- intent: thanks
+  examples: |
+    - thx
+    - Awesome, thanks!
+    - thanks mate
+    - thank you
+
+- intent: confirm_presence
+  examples: |
+    - are you here ?
+    - are you there?
 
 - intent: mood_great
   examples: |
@@ -65,27 +87,114 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
+    - cool beans
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: out_of_scope
+  examples: |
+    - mmm I can't see what you're saying
+    - I am looking forward to my best friend's wedding. Do you have any tuxedo's?
+    - hmmmm
+    - Can I?
+    - Well, okay then
+    - what is the square root of 5
+    - I want to know the weather
+    - what is the meaning of life.
+    - Fridge Isn't Running
+    - my tv isn't working
+    - I want a pizza
+    - my washing machine isn't working
+    - what year is it
+    - order a pizza
+    - I want to order a pizza
+    - what is the weather today
+    - what is the weather
+    - why is the sky blue
+    - blah blah blah
+
+- intent: whats_your_name
+  examples: |
+    - can you tell me your name?
+    - what's your name?
+
+- intent: return_policy
+  examples: |
+    - What is your return policy?
+    - Can I return an item?
+    - How do I initiate a return?
+    - What is the process for returning a defective item?
+    - Are there any exceptions to your return policy?
+    - Do you accept returns for unopened items?
+
+- intent: shipping_info
+  examples: |
+    - What are your shipping fees?
+    - How long does delivery take?
+    - Do you ship internationally?
+    - What are the shipping times for different regions?
+    - Do you offer free shipping?
+    - How can I track my order?
+
+- intent: privacy_policy
+  examples: |
+    - What is your privacy policy?
+    - How do you protect my personal information?
+    - Do you share my information with third parties?
+    - Can I opt out of receiving promotional emails?
+    - How do you handle cookies on your website?
+
+- intent: return_process
+  examples: |
+    - How do I start a return process?
+    - What are the steps to return an item?
+    - Can you guide me through the return process?
+    - What information do I need to provide for a return?
+    - Do I need to pay for return shipping?
+
+- intent: contact_info
+  examples: |
+    - How can I contact your customer service?
+    - What is your customer service email?
+    - Can I call your customer support?
+    - What are your customer service hours?
+
+- intent: product_information
+  examples: |
+    - Can you provide more details about your products?
+    - Where do your products come from?
+    - Are your products eco-friendly?
+    - Do you offer replicas of famous artworks?
+    - Can I find original artworks on your website?
+
+- intent: privacy_consent
+  examples: |
+    - Do I need to provide consent for you to collect my information?
+    - How do I give consent for data collection?
+    - Can I opt out of data collection?
+    - What are my rights regarding privacy consent?
+
+- intent: return_refund_policy
+  examples: |
+    - How long does it take to receive a refund for a return?
+    - Will I be refunded for shipping costs?
+    - What is your refund policy for returned items?
+    - Do you issue refunds to the original payment method?
+    
+
+- intent: rechercher_produit
+  examples: |
+    - Cherche le produit [Veste légère](prod)
+    - Donne-moi des informations sur [Veste légère](prod)
+    - Donne-moi des informations sur [Veste en cuir](prod)
+    - Cherche le produit [Veste en cuir](prod)
+    - Cherche le produit [Veste de sport](prod)
+    - Donne-moi des informations sur [Veste de sport](prod)
+
+# ameliorer nlu: precisio,/detail en eng
+# essayer d"utiliser fichier config et test_stories
+# ameliorer le bot en trouvant des trucs en plus ( retenir info utilisateurs/et faire des recommandations en rapport

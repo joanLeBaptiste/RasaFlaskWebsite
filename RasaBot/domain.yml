@@ -5,29 +5,69 @@ intents:
   - goodbye
   - affirm
   - deny
+  - payment_methods
+  - thanks
+  - confirm_presence
   - mood_great
-  - mood_unhappy
   - bot_challenge
+  - out_of_scope
+  - whats_your_name
+  - return_policy
+  - shipping_info
+  - privacy_policy
+  - return_process
+  - contact_info
+  - product_information
+  - privacy_consent
+  - return_refund_policy
+  - rechercher_produit
+
+entities:
+  - prod
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
+  - text: "Hello! How can I help you ?"
   utter_goodbye:
-  - text: "Bye"
+  - text: "goodbye !"
+  utter_deny:
+  - text: "sorry :("
+  utter_affirm:
+  - text: "cool !"
+  utter_payment_methods:
+  - text: "we accept PayPal, or bank debit"
+  utter_thanks:
+  - text: "you are welcome "
+  utter_confirm_presence:
+  - text: "yes, i am RasaBot to your service"
+  utter_mood_great:
+  - text: "im happy to help you"
+  utter_bot_challenge:
+  - text: "i dont know"
+  utter_out_of_scope:
+  - text: "i dont understand"
+  utter_whats_your_name:
+  - text: "i am RasaBot"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_return_policy:
+  - text: "we accept returns within 30 days for unopened products"
+  utter_shipping_info:
+  - text: "delivery time: 1-5 days in France, 5-10 days in EU, 10-20 days outside EU"
+  utter_privacy_policy:
+  - text: "we keep your data to improve our services"
+  utter_return_process:
+  - text: "you need to make a prior request to customer service: HackathonS4@mail.com"
+  utter_contact_info:
+  - text: "customer service: hackathonS4@mail.com, phone number: +33 11111111"
+  utter_product_information:
+  - text: "all of our product come from french industry, we work with local workers and we only use french material. Which reduce our ecologic impact"
+  utter_privacy_consent:
+  - text: "cookies allow us to better understand your expectations and offer you suitable products"
+  utter_return_refund_policy:
+  - text: "we only refund unopened products within 30 days, using the payment method used during the purchase, keep the receipt as proof"
+actions:
+  - action_get_product_characteristics
+  - action_produit_caracteristics
 
 session_config:
   session_expiration_time: 60
